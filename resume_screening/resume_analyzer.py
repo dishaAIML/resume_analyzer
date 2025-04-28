@@ -17,7 +17,8 @@ import pymysql
 import plotly.express as px
 import yt_dlp as youtube_dl
 #from Courses.Courses import ds_course, web_course, android_course, ios_course, UIUX_course
-
+import nltk
+nltk.download('stopwords')
 
 def fetch_yt_video(link):
     video = pafy.new(link)
