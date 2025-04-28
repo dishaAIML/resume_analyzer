@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import base64,random
 import time,datetime
+import nltk
+nltk.download('stopwords')
 from pyresparser import ResumeParser
 from pdfminer.layout import LAParams, LTTextBox
 from pdfminer.pdfpage import PDFPage
@@ -17,8 +19,7 @@ import pymysql
 import plotly.express as px
 import yt_dlp as youtube_dl
 #from Courses.Courses import ds_course, web_course, android_course, ios_course, UIUX_course
-import nltk
-nltk.download('stopwords')
+
 
 def fetch_yt_video(link):
     video = pafy.new(link)
